@@ -22,7 +22,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5px 20px;
+    padding: 20px 5px;
 }
 .password h4{
     font-weight: 600;
@@ -180,14 +180,17 @@ body{
     .password h1{
         font-size: 30px;
         text-align: center;
-        line-height: 32px;
+        line-height: 32px !important;
     }
     .password_output {
         min-width: auto;
-        width: 90%;
+        width: 95%;
     }
     .password_controls   {
         min-width: auto;
-        width: 90%;
+        width: 95%;
+    }
+    .password_controls > div > span{
+        font-size: 18px !important;
     }
 }
