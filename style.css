@@ -1,0 +1,193 @@
+:root{
+    --text-size: 25px;
+    --primary-color: #dd2222;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #E0E0E0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+.password{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+}
+.password h4{
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #3B70D4;
+    margin-bottom: 20px;
+}
+.password h1{
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 60px !important;
+    color: #000;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.password_output{
+    min-width: 500px;
+    /* background: #fff; */
+    border-radius: 15px;
+    padding: 0 30px 0 0;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    background: #E0E0E0;
+    box-shadow:  10px 10px 30px #bebebe,
+                -10px -10px 30px #ffffff;
+}
+.password_output input{
+    width: 85%;
+    border: none;
+    outline: none;
+    height: 80px;
+    padding-left: 30px;
+    background: #E0E0E0;
+    border-radius: 50px;
+    font-size: var(--text-size);
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.copy:hover{
+    cursor: pointer;
+    fill: #d22;
+}
+
+/* Password Controls */
+.password_controls{
+    min-width: 500px;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    background: #E0E0E0;
+    box-shadow:  10px 10px 30px #bebebe,
+                -10px -10px 30px #ffffff;
+}
+.password_controls > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.password_controls > div > span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+.password_controls_length input{
+    width: 60px;
+    height: 40px;
+    font-size: 18px !important;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 3px;
+}
+.toggle{
+    display: block;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.toggle  > .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px
+}
+.toggle input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggle .slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+.toggle > input:checked + .slider {
+    background-color: #d22;
+} 
+.toggle input:focus + .slider {
+    box-shadow: 0 0 1px #d22;
+}  
+.toggle > input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+#generatebtn{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 35px;
+    border-radius: 50px;
+    background: #d22;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    box-shadow:  10px 10px 30px #bebebe,
+    -10px -10px 30px #ffffff;
+    margin-bottom: 50px;
+}
+#generatebtn:hover{
+    background: #ce0f0f;
+}
+.copyright span{
+    color: #d22;
+}
+.copyright a:hover{
+    text-decoration: none;
+}
+@media screen and (max-width: 720px) {
+    .password h1{
+        font-size: 30px;
+        text-align: center;
+        line-height: 32px;
+    }
+    .password_output {
+        min-width: auto;
+        width: 90%;
+    }
+    .password_controls   {
+        min-width: auto;
+        width: 90%;
+    }
+}

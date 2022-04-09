@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator app - powered by FalconHawks</title>
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom JavaScript -->
+    <script src="script.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="password">
+        <h4>Password generator</h4>
+        <h1>Generate a secure password</h1>
+        <div class="password_output">
+            <input type="text" placeholder="Click generate Now" id="output">
+            <svg class="copy" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#282828"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+        </div>
+        <div class="password_controls">
+            <div class="password_controls_length">
+                <span>Password Length</span>
+                <input type="number" id="length" value="10" max="60">
+            </div>
+
+            <div class="password_controls_uppercase">
+                <span>Include Uppercase</span>
+                <label for="uppercase" class="toggle">
+                    <input type="checkbox" name="" id="uppercase" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="password_controls_lowercase">
+                <span>Include Lowercase</span>
+                <label for="lowercase" class="toggle">
+                    <input type="checkbox" name="" id="lowercase">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="password_controls_numbers">
+                <span>Include Numbers</span>
+                <label for="numbers" class="toggle">
+                    <input type="checkbox" name="" id="numbers">
+                    <span class="slider"></span>
+                </label>
+            </div>
+                
+            <div class="password_controls_symbols">
+                <span>Include Symbols</span>
+                <label for="symbols" class="toggle">
+                    <input type="checkbox" name="" id="symbols">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <button id="generatebtn">Generate Now</button>
+        <p class="copyright">Produdly Powered by <span>❤</span> <a href="https://FalconHawks.com" target="_blank">FalconHawks</a></p>
+    </div>
+</body>
+</html>
